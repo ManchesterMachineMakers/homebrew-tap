@@ -14,18 +14,19 @@ class GetRobotCode < Formula
     # depends_on "cmake" => :build
   
     def install
-      (bin+"mmm-get-robot-code").write <<-END_FILE.unindent
-            #!/usr/bin/env bash
-            echo Initializing adb
-            adb devices
-            echo Downloading
-            wget -O TeamCode.apk https://github.com/ManchesterMachineMakers/FreightFrenzy/releases/download/latest/TeamCode-release-FULL_ROBOT.apk
-            echo Uninstalling previous version
-            adb uninstall com.qualcomm.ftcrobotcontroller
-            echo Installing new version
-            adb install ./TeamCode.apk
-            echo Done
-            END_FILE
+        (bin+"mmm-get-robot-code").write <<-END_FILE
+#!/usr/bin/env bash
+echo Initializing adb
+adb devices
+echo Downloading
+wget -O TeamCode.apk https://github.com/ManchesterMachineMakers/FreightFrenzy/releases/download/latest/TeamCode-release-FULL_ROBOT.apk
+echo Uninstalling previous version
+adb uninstall com.qualcomm.ftcrobotcontroller
+echo Installing new version
+adb install ./TeamCode.apk
+echo Done
+END_FILE
+        system "chmod", "+x", bin+"mmm-get-robot-code"
     end
   
     test do
