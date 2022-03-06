@@ -18,12 +18,20 @@ class GetRobotCode < Formula
 #!/usr/bin/env bash
 echo Initializing adb
 adb devices
-echo Downloading
-wget -O TeamCode.apk https://github.com/ManchesterMachineMakers/FreightFrenzy/releases/download/latest/TeamCode-release-FULL_ROBOT.apk
+
+apkfile=${1:-"TeamCode.apk"}
+
+if [ ! -f $apkfile ]; then
+    echo Downloading
+    wget -O $apkfile https://github.com/ManchesterMachineMakers/FreightFrenzy/releases/download/latest/TeamCode-release-FULL_ROBOT.apk
+fi
+
 echo Uninstalling previous version
 adb uninstall com.qualcomm.ftcrobotcontroller
+
 echo Installing new version
 adb install ./TeamCode.apk
+
 echo Done
 END_FILE
         system "chmod", "+x", bin+"mmm-get-robot-code"
