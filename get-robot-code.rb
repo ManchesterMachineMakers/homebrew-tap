@@ -4,7 +4,7 @@
 class GetRobotCode < Formula
     desc ""
     homepage ""
-    version "0.1.0"
+    version "0.1.1"
     url "https://codeload.github.com/aleksrutins/emptyrepo/zip/refs/heads/master"
     sha256 "fe8d1cb581fb2c38f15b8840a7a78f905bbf5b64685bad1eadc2ea674207774c"
     license ""
