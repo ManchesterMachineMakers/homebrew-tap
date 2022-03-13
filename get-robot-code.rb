@@ -4,7 +4,7 @@
 class GetRobotCode < Formula
     desc ""
     homepage ""
-    version "latest"
+    version "0.1.0"
     url "file:///dev/null"
     sha256 ""
     license ""
