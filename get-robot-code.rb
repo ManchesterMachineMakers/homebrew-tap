@@ -6,7 +6,7 @@ class GetRobotCode < Formula
     homepage ""
     version "0.1.0"
     url "file:///dev/null"
-    sha256 "a948904f2f0f479b8f8197694b30184b0d2ed1c1cd2a1ec0fb85d299a192a447"
+    sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     license ""
 
     depends_on "wget"
