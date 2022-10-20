@@ -4,7 +4,7 @@
 class GetRobotCode < Formula
     desc ""
     homepage ""
-    version "0.1.2"
+    version "0.1.3"
     url "https://codeload.github.com/aleksrutins/emptyrepo/zip/refs/heads/master"
     sha256 "fe8d1cb581fb2c38f15b8840a7a78f905bbf5b64685bad1eadc2ea674207774c"
     license ""
@@ -23,7 +23,7 @@ apkfile=${1:-"TeamCode.apk"}
 
 if [ ! -f $apkfile -o "$2" = "force" ]; then
     echo Downloading
-    wget -O $apkfile https://github.com/ManchesterMachineMakers/FreightFrenzy/releases/download/latest/TeamCode-release-FULL_ROBOT.apk
+    wget -O $apkfile https://github.com/ManchesterMachineMakers/FreightFrenzy/releases/download/latest/TeamCode-release-fullRobot.apk
 fi
 
 echo Uninstalling previous version
