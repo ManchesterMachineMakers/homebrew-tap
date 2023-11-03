@@ -23,7 +23,7 @@ apkfile=${1:-"TeamCode.apk"}
 
 if [ ! -f $apkfile -o "$2" = "force" ]; then
     echo Downloading
-    wget -O $apkfile https://github.com/ManchesterMachineMakers/FreightFrenzy/releases/download/latest/TeamCode-release-fullRobot.apk
+    wget -O $apkfile https://github.com/ManchesterMachineMakers/RobotController/releases/download/latest/TeamCode-release-.apk
 fi
 
 echo Uninstalling previous version
